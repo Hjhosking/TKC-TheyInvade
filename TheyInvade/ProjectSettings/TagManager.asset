@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - BG
+  - PF
+  - FG
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 1462529803
+    locked: 0
+  - name: PF
+    uniqueID: 3948441161
+    locked: 0
+  - name: FG
+    uniqueID: 3979239309
     locked: 0
