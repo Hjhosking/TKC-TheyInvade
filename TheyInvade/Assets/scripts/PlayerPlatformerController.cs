@@ -42,12 +42,12 @@ public class PlayerPlatformerController : PhysicsObject
 
         if (mousePos.x >= 0 && !facingRight)
         {
-            transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            transform.localScale = new Vector3(1f, 1f, 1);
             facingRight = true;
         }
         else if (mousePos.x < 0 && facingRight)
         {
-            transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+            transform.localScale = new Vector3(-1f, 1f, 1);
             facingRight = false;
         }
 
