@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.y < -10)
+        if (playerTransform.position.y < -7)
         {
             playerTransform.position = spawnPosition.position;
             hitPoint--;
