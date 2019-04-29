@@ -5,9 +5,16 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform playerPositon;
+    public float yMin;
 
     private void FixedUpdate()
     {
-        transform.position = new Vector3(playerPositon.position.x, playerPositon.position.y, transform.position.z);
+        Vector2 playerPos = new Vector2(playerPositon.position.x, playerPositon.position.y);
+        /*if (playerPos.y < yMin)
+        {
+            playerPos.y = yMin;
+        }
+        transform.position = playerPos;*/
+        transform.position = new Vector3(playerPositon.position.x, playerPositon.position.y, playerPositon.position.z);
     }
 }
