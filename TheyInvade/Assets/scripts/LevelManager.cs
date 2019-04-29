@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public float fallRespawn;
     private int hitPoint = 3;
     private int score = 0;
 
@@ -13,7 +14,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.y < -7)
+        if (playerTransform.position.y < fallRespawn)
         {
             playerTransform.position = spawnPosition.position;
             hitPoint--;
