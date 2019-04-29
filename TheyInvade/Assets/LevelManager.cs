@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    private int hitPoint = 3;
+    private int maxRespawn = 3;
+    private int currentRespawn = 0;
     private int score = 0;
+    
+    [SerializeField]
+    private Player character;
 
     public Transform spawnPosition;
     public Transform playerTransform;
+
+    
+
 
     // Update is called once per frame
     void Update()
@@ -16,8 +23,9 @@ public class LevelManager : MonoBehaviour
         if (playerTransform.position.y < -7)
         {
             playerTransform.position = spawnPosition.position;
-            hitPoint--;
-            if (hitPoint <= 0)
+            character.CurrentLives--;
+
+            if (this.currentRespawn >= 3)
             {
                 Debug.Log("Failure!");
             }

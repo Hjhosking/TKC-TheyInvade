@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerPlatformerController : PhysicsObject
 {
-
+   
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed =100;
 
@@ -18,6 +18,7 @@ public class PlayerPlatformerController : PhysicsObject
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
+        
     }
 
     protected override void ComputeVelocity()
@@ -51,9 +52,10 @@ public class PlayerPlatformerController : PhysicsObject
             facingRight = false;
         }
 
-        
+
         animator.SetFloat("Speed", Mathf.Abs(velocity.x) / maxSpeed);
 
         targetVelocity = move * maxSpeed;
+
     }
 }

@@ -38,8 +38,11 @@ public class AimAtMouse : MonoBehaviour
         }
 
         float aimAngle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(aimAngle, Vector3.forward);
 
+        if (aimAngle > -60 && aimAngle < 50)
+        {
+            transform.rotation = Quaternion.AngleAxis(aimAngle, Vector3.forward);
+        }
 
 
     }
