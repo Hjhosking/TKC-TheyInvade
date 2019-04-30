@@ -56,7 +56,10 @@ public class Player : MonoBehaviour
         {
             lives.CurrentVal --;
             this.currentLives = lives.CurrentVal;
-            health.CurrentVal = 3;
+            if (lives.CurrentVal > 0)
+            {
+                health.CurrentVal = 3;
+            }
         }
     }
 }

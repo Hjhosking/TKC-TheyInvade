@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 256b517f923809c409cc3925753ed090
+guid: 91cf30a0cd74f55459723b36c2d4e6af
 TextureImporter:
   fileIDToRecycleName:
-    21300000: TheyInvadeSign_0
-    21300002: TheyInvadeSign_1
-    21300004: TheyInvadeSign_2
+    21300000: seamlessplatforms_0
+    21300002: seamlessplatforms_1
+    21300004: seamlessplatforms_2
+    21300006: seamlessplatforms_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -48,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 104
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,61 +88,81 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TheyInvadeSign_0
+      name: seamlessplatforms_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 208
-        width: 104
-        height: 104
+        x: 14
+        y: 369
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 152, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19105289801a0264089bab9a0b16d72b
+      spriteID: 8ecd8f6dbf0f015448ab619853de6018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TheyInvadeSign_1
+      name: seamlessplatforms_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 104
-        width: 104
-        height: 104
+        x: 222
+        y: 366
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 152, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475517e4b37eeb6479a897de91fb0767
+      spriteID: eda6cf2806cf3664d888124bcdf3a421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TheyInvadeSign_2
+      name: seamlessplatforms_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 104
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 8
+        y: 155
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5044268, y: 0.87627304}
+      border: {x: 0, y: 152, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00af6473c0b57084988894b736ac8ba2
+      spriteID: 7636af7eea3228e4994a27c79930d03c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamlessplatforms_3
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 158
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 152, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb09f047d2058ef4a9d6669b60edba0c
       vertices: []
       indices: 
       edges: []
@@ -149,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b49358c51838bdb4f93ff61f05f222cc
+    spriteID: f05cfd829e420254480759d130086d3d
     vertices: []
     indices: 
     edges: []

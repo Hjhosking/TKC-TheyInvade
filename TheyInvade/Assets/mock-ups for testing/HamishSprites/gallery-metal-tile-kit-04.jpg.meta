@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 256b517f923809c409cc3925753ed090
+guid: f8ba4e25d25af0341a2cd2273f0521e3
 TextureImporter:
   fileIDToRecycleName:
-    21300000: TheyInvadeSign_0
-    21300002: TheyInvadeSign_1
-    21300004: TheyInvadeSign_2
+    21300000: gallery-metal-tile-kit-04_0
+    21300002: gallery-metal-tile-kit-04_1
+    21300004: gallery-metal-tile-kit-04_2
+    21300006: gallery-metal-tile-kit-04_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -48,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 104
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TheyInvadeSign_0
+      name: gallery-metal-tile-kit-04_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 208
-        width: 104
-        height: 104
+        y: 250
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,19 +102,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19105289801a0264089bab9a0b16d72b
+      spriteID: e8961d22c59edcb43918c4d646db25d7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TheyInvadeSign_1
+      name: gallery-metal-tile-kit-04_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 104
-        width: 104
-        height: 104
+        x: 250
+        y: 250
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,19 +122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475517e4b37eeb6479a897de91fb0767
+      spriteID: 712551df1c4052042a5653382ca5e886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TheyInvadeSign_2
+      name: gallery-metal-tile-kit-04_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 104
-        height: 104
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +142,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00af6473c0b57084988894b736ac8ba2
+      spriteID: 547b6a39ef47fd9409f667561e3e45c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gallery-metal-tile-kit-04_3
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5238ac132b223934c9d9c3cbe926494f
       vertices: []
       indices: 
       edges: []
@@ -149,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b49358c51838bdb4f93ff61f05f222cc
+    spriteID: 40c2a0015890eb045a14cdcbf6f70cea
     vertices: []
     indices: 
     edges: []

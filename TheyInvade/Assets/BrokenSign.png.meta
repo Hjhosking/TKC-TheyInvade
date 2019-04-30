@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 256b517f923809c409cc3925753ed090
+guid: 43d939b0a684e1940bb74c8b229ad0fe
 TextureImporter:
   fileIDToRecycleName:
-    21300000: TheyInvadeSign_0
-    21300002: TheyInvadeSign_1
-    21300004: TheyInvadeSign_2
+    21300000: BrokenSign_0
+    21300002: BrokenSign_1
+    21300004: BrokenSign_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,61 +87,61 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TheyInvadeSign_0
+      name: BrokenSign_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 208
-        width: 104
-        height: 104
+        y: 256
+        width: 103
+        height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19105289801a0264089bab9a0b16d72b
+      spriteID: 66e091c96d8357a4c815084675c22f08
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TheyInvadeSign_1
+      name: BrokenSign_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 104
-        width: 104
-        height: 104
+        y: 103
+        width: 103
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 51, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475517e4b37eeb6479a897de91fb0767
+      spriteID: 824f3b0d09924d14e91c20d79bc69aef
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TheyInvadeSign_2
+      name: BrokenSign_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 104
-        height: 104
+        x: 1
+        y: 1
+        width: 103
+        height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00af6473c0b57084988894b736ac8ba2
+      spriteID: 00e0722af6f40ff49a268e9388e08494
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b49358c51838bdb4f93ff61f05f222cc
+    spriteID: fbfc069691372994d8f0863e298df3be
     vertices: []
     indices: 
     edges: []
