@@ -5,6 +5,8 @@ using UnityEngine;
 public class AimAtMouse : MonoBehaviour
 {
     bool facingRight = true;
+    private int maxAngle = 35;
+    private int minAngle = -35;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +47,11 @@ public class AimAtMouse : MonoBehaviour
         float aimAngle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
 
         // rotate player object to face mouse
-        transform.rotation = Quaternion.AngleAxis(aimAngle, Vector3.forward);
-
+        // if limits angle of aim
+        if (aimAngle >= minAngle && aimAngle <= maxAngle)
+        {
+            transform.rotation = Quaternion.AngleAxis(aimAngle, Vector3.forward);
+        }
 
 
     }
