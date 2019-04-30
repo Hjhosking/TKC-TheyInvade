@@ -33,6 +33,9 @@ public class PlayerPlatformerController : PhysicsObject
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
+            // Sets player animation to jump 
+            animator.SetTrigger("jump");
+
         }
 
         // release jump force when jump button is released
@@ -60,7 +63,7 @@ public class PlayerPlatformerController : PhysicsObject
             facingRight = false;
         }
 
-        // Set the Animator Speed variable to players horizontal speed
+        // Set the Animator Speed variable to players horizontal speed switches run animation
         animator.SetFloat("Speed", Mathf.Abs(velocity.x) / maxSpeed);
 
         targetVelocity = move * maxSpeed;
