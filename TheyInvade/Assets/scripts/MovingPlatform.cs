@@ -18,14 +18,17 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set the first poitn to move to
         currentPoint = points[pointSelection];
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Start platform moving towards first destination
         platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
 
+        // When platform reaches destination, update currentPoint so that it becomes the next destination but doesnt move outside the array list
         if (platform.transform.position == currentPoint.position)
         {
             pointSelection++;

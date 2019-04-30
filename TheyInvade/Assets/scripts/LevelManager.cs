@@ -18,14 +18,19 @@ public class LevelManager : MonoBehaviour
     public Transform spawnPosition;
     public Transform playerTransform;
 
-    
 
+    private void Start()
+    {
+        playerTransform.position = spawnPosition.position;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        // Check if player has fallen below given threshold
         if (playerTransform.position.y < fallRespawn)
         {
+            // Trnsform player back to spawn point and deduct a life
             playerTransform.position = spawnPosition.position;
             character.CurrentLives--;
 
