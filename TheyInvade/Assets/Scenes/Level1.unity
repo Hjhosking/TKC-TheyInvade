@@ -1069,7 +1069,7 @@ MonoBehaviour:
   playerPositon: {fileID: 459301538}
   minX: -11
   minY: 0.5
-  maxX: 73.38972
+  maxX: 76.34
   maxY: 11.44841
 --- !u!20 &519420031
 Camera:
@@ -10046,7 +10046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109001876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.3, y: 11.35, z: 0}
+  m_LocalPosition: {x: 0, y: 11.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 197966913}
