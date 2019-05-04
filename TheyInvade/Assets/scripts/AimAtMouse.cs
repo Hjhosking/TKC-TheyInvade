@@ -7,6 +7,7 @@ public class AimAtMouse : MonoBehaviour
     bool facingRight = true;
     private int maxAngle = 35;
     private int minAngle = -35;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class AimAtMouse : MonoBehaviour
         {
             lookPos.y *= -1;
             lookPos.x *= -1;
+           
         }
 
         //calculate angle from player to mouse
@@ -50,7 +52,9 @@ public class AimAtMouse : MonoBehaviour
         // if limits angle of aim
         if (aimAngle >= minAngle && aimAngle <= maxAngle)
         {
+            //change angle of arm 
             transform.rotation = Quaternion.AngleAxis(aimAngle, Vector3.forward);
+            
         }
 
 

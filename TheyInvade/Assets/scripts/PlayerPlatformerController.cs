@@ -11,6 +11,9 @@ public class PlayerPlatformerController : PhysicsObject
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    [SerializeField]
+    private GameObject firePoint;
+
     bool facingRight = true;
 
     // Use this for initialization
@@ -55,12 +58,19 @@ public class PlayerPlatformerController : PhysicsObject
         if (mousePos.x >= 0 && !facingRight)
         {
             transform.localScale = new Vector3(1f, 1f, 1);
+            //Changes direction of bullet trajectory 
+            firePoint.transform.localRotation = Quaternion.AngleAxis(0f, Vector3.forward);
             facingRight = true;
+          
+
         }
         else if (mousePos.x < 0 && facingRight)
         {
             transform.localScale = new Vector3(-1f, 1f, 1);
+            //Changes direction of bullet trajectory 
+            firePoint.transform.localRotation = Quaternion.AngleAxis(180f, Vector3.forward);
             facingRight = false;
+            
         }
 
         // Set the Animator Speed variable to players horizontal speed switches run animation

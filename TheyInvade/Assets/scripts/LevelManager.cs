@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     private int score = 0;
     
     [SerializeField]
-    private Player character;
+    private PlayerStats character;
 
     public Transform spawnPosition;
     public Transform playerTransform;

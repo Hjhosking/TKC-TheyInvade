@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
     [SerializeField]
     private Stat health;

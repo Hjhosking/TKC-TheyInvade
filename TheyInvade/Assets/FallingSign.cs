@@ -2,19 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingPlatform : MonoBehaviour
+
+public class FallingSign : MonoBehaviour
 {
     // This script controls the falling platforms, detecting collision from player tagged objects, waiting a set delay amount then falling away
     private Rigidbody2D rb2d;
 
     public float fallDelay;
 
-
     // Start is called before the first frame update
     void Start()
     {
         // get rigidbody of object
         rb2d = GetComponent<Rigidbody2D>();
+    }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Bullet") // this string is your newly created tag
+        {
+            StartCoroutine(Fall());
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -35,3 +42,4 @@ public class FallingPlatform : MonoBehaviour
         yield return 0;
     }
 }
+
