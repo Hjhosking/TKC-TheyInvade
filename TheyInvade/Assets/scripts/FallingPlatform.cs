@@ -8,10 +8,9 @@ public class FallingPlatform : MonoBehaviour
     private Rigidbody2D rb2d;
     public float fallDelay;
     public GameObject Platform;
-    public bool dead = false;
-    int respawn = 0;
+    public bool died = false;
+    public int respawn = 0;
     Vector2 spawnPoint;
-    public int respawnNumber = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +40,17 @@ public class FallingPlatform : MonoBehaviour
 
     private void Update()
     {
-        dead = LevelManager.dead;
-        if (dead)
+        if (LevelManager.deathCount > respawn)
+            died = true;
+        if (died)
         {
+            rb2d.velocity = new Vector2(0, 0);
             rb2d.isKinematic = true;
             Platform.transform.position = spawnPoint;
-
+            respawn++;
+            died = false;
         }
+        
+        
     }
 }

@@ -19,7 +19,8 @@ public class LevelManager : MonoBehaviour
     public Transform spawnPosition;
     public Transform playerTransform;
     public static bool dead = false;
-    
+    public static int deathCount;
+
     
 
 
@@ -27,11 +28,14 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         playerTransform.position = spawnPosition.position;
+        deathCount = currentRespawn;
     }
 
     // Update is called once per frame
     void Update()
     {
+        deathCount = currentRespawn;
+
         // Check if player has fallen below given threshold
         if (playerTransform.position.y < fallRespawn)
         {
@@ -55,12 +59,6 @@ public class LevelManager : MonoBehaviour
         
         
     }
-    IEnumerator Wait()
-    {
-        yield return new WaitForSecondsRealtime(5f);
-
-        yield return 0;
-
-    }
+    
 
 }

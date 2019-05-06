@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
+    public GameObject player;
 
     public GameObject platform;
 
@@ -15,11 +16,18 @@ public class MovingPlatform : MonoBehaviour
 
     private int pointSelection;
 
+    private Rigidbody2D rb2d;
+    private Rigidbody2D playerRB;
+
+    private bool riding = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         // Set the first poitn to move to
         currentPoint = points[pointSelection];
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -40,5 +48,21 @@ public class MovingPlatform : MonoBehaviour
 
             currentPoint = points[pointSelection];
         }
+
+        if (riding)
+        {
+            playerRB = player.GetComponent<Rigidbody2D>();
+            playerRB.velocity = rb2d.velocity;
+
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.collider.CompareTag("Player"))
+        {
+            riding = true;
+        }
+            
     }
 }
