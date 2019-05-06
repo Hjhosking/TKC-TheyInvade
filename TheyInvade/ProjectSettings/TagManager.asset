@@ -7,6 +7,7 @@ TagManager:
   - MovingPlatform
   - Bullet
   - LevelFinish
+  - Enemy
   layers:
   - Default
   - TransparentFX

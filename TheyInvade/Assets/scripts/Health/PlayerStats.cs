@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+
     void Awake()
     {
         health.Initialize();
@@ -30,6 +31,13 @@ public class PlayerStats : MonoBehaviour
         this.currentLives = 3;
         this.currentHealth = 3;
     }
+
+    public void updateCurrentHealth(int damage)
+    {
+        health.CurrentVal = health.CurrentVal + damage;
+        print(health.CurrentVal);
+    }
+
 
     void Start()
     {
