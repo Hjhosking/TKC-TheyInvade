@@ -6,15 +6,19 @@ public class FallingPlatform : MonoBehaviour
 {
     // This script controls the falling platforms, detecting collision from player tagged objects, waiting a set delay amount then falling away
     private Rigidbody2D rb2d;
-
     public float fallDelay;
-
+    public GameObject Platform;
+    public bool dead = false;
+    int respawn = 0;
+    Vector2 spawnPoint;
+    public int respawnNumber = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         // get rigidbody of object
         rb2d = GetComponent<Rigidbody2D>();
+        spawnPoint = new Vector2(Platform.transform.position.x, Platform.transform.position.y);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -33,5 +37,16 @@ public class FallingPlatform : MonoBehaviour
         rb2d.isKinematic = false;
         // return 0 so countdown ends
         yield return 0;
+    }
+
+    private void Update()
+    {
+        dead = LevelManager.dead;
+        if (dead)
+        {
+            rb2d.isKinematic = true;
+            Platform.transform.position = spawnPoint;
+
+        }
     }
 }
