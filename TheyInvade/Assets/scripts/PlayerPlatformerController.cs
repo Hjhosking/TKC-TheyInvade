@@ -10,6 +10,8 @@ public class PlayerPlatformerController : PhysicsObject
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    [SerializeField]
+    private CapsuleCollider2D playerCollider;
 
     [SerializeField]
     private GameObject firePoint;
@@ -32,6 +34,7 @@ public class PlayerPlatformerController : PhysicsObject
         // move player left or right from inouts A/D or left/right arrows
         move.x = Input.GetAxis("Horizontal");
 
+       
         //  Jumping. Check if player tries to jump from grounded state 
         if (Input.GetButtonDown("Jump") && grounded)
         {

@@ -21,5 +21,9 @@ public class Bullet : MonoBehaviour {
             Destroy(hitInfo.gameObject);
             Destroy(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
