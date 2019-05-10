@@ -8,6 +8,7 @@ public class PlayerPlatformerController : PhysicsObject
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed =100;
 
+    
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     [SerializeField]
@@ -15,7 +16,7 @@ public class PlayerPlatformerController : PhysicsObject
 
     [SerializeField]
     private GameObject firePoint;
-
+   
     bool facingRight = true;
 
     // Use this for initialization
@@ -24,6 +25,9 @@ public class PlayerPlatformerController : PhysicsObject
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
     }
+
+
+    
 
     protected override void ComputeVelocity()
     {

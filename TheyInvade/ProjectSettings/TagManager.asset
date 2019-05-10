@@ -43,11 +43,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: BG
     uniqueID: 1462529803
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: PF
     uniqueID: 3948441161

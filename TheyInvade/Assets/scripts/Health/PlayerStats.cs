@@ -23,6 +23,15 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public float CurrentHealth
+    {
+        get
+        {
+            return this.currentHealth;
+        }
+    }
+
+        
 
     void Awake()
     {
@@ -38,6 +47,20 @@ public class PlayerStats : MonoBehaviour
         print(health.CurrentVal);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+            this.currentHealth--;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            this.currentHealth--;
+        }
+    }
+
 
     void Start()
     {
@@ -47,6 +70,15 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health.CurrentVal > this.CurrentHealth)
+        {
+            health.MaxVal = 3;
+            health.CurrentVal = this.CurrentHealth;
+            if (health.CurrentVal == 0 && lives.CurrentVal > 0)
+            {
+                this.currentHealth = 3;
+            }
+        }
         if (lives.CurrentVal > this.currentLives)
         {
             lives.MaxVal = 3;
@@ -54,11 +86,7 @@ public class PlayerStats : MonoBehaviour
             health.CurrentVal = 3;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            health.MaxVal = 3;
-            health.CurrentVal -= 1;
-        }
+    
 
         if (health.CurrentVal == 0)
         {

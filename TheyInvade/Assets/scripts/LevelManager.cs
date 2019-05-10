@@ -23,12 +23,15 @@ public class LevelManager : MonoBehaviour
 
     
 
+    
+
 
 
     private void Start()
     {
         playerTransform.position = spawnPosition.position;
         deathCount = currentRespawn;
+
     }
 
     // Update is called once per frame
@@ -37,7 +40,7 @@ public class LevelManager : MonoBehaviour
         deathCount = currentRespawn;
 
         // Check if player has fallen below given threshold
-        if (playerTransform.position.y < fallRespawn)
+        if (playerTransform.position.y < fallRespawn || character.CurrentHealth == 0)
         {
             dead = true;
         }
