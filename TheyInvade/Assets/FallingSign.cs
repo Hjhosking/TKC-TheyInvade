@@ -18,7 +18,7 @@ public class FallingSign : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Bullet") // this string is your newly created tag
+        if (collider.gameObject.tag == "Player Bullet") // this string is your newly created tag
         {
             StartCoroutine(Fall());
         }

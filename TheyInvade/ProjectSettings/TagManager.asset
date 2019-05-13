@@ -9,6 +9,7 @@ TagManager:
   - LevelFinish
   - Enemy
   - HorizontalPlatform
+  - Player Bullet
   layers:
   - Default
   - TransparentFX
