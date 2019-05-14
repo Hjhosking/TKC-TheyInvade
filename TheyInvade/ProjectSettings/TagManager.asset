@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - HorizontalPlatform
   - Player Bullet
+  - enemyTrigger
   layers:
   - Default
   - TransparentFX

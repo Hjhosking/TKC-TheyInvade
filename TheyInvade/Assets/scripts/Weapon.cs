@@ -7,29 +7,40 @@ public class Weapon : MonoBehaviour {
     public Transform firePoint;
     public GameObject bulletPrefab;
     public bool isPlayer = false;
-    float nextFire = 0;
-    private bool attacking = false;
+    float timer = 0.0f;
+    private bool canShoot = false;
 
-    public bool Attacking
+    //trigger for enemy fire - receives command realayed from AlienController
+    public bool CanShoot
     {
         get
         {
-         return this.attacking;
+         return this.canShoot;
         }
         set
         {
-            attacking = value;
+            canShoot = value;
         }
     }
 
+    //Enemy fire timer 
     void enemyAttack()
     {
-        float waitTime = 1f;
-
-        if (Time.time > nextFire)
+        timer -= Time.deltaTime;
+        if (timer < 0)
         {
-            nextFire = Time.time + waitTime;
-            Shoot();
+            if (canShoot == true)
+            {
+                Shoot();
+            }
+            if (canShoot == false)
+            {
+                timer = 0.0f;
+            }
+            else
+            {
+                timer = 1.0f;
+            }
         }
 
     }
@@ -37,12 +48,13 @@ public class Weapon : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        // Player fire 
         if (isPlayer && Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
 
-        else if (isPlayer == false && Attacking == true)
+        else if (isPlayer == false && canShoot == true)
         {
             enemyAttack();
         }

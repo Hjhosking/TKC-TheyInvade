@@ -4,34 +4,29 @@ using UnityEngine;
 
 public class AlienController : MonoBehaviour
 {
-  
+
     public GameObject firePoint;
     public Weapon weapon;
     public bool onCamera = false;
-   
+    private bool canShoot = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    //Receive trigger message from KillZone & relay to weapon 
+    public bool CanShoot {
+        get {
+            return canShoot;                }
+        set {
+            this.canShoot = value;
+            weapon.CanShoot = value;
+        }
     }
-
-    private void OnBecameInvisible()
-    {
-        onCamera = false;
-    }
-    private void OnBecameVisible()
-    {
-        onCamera = true;
-    }
-
 
 
     // Update is called once per frame
     void Update()
     {
-        if (firePoint != null)
-        {
+            
+        
             //Find the posistion of the player 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             var playerPos = player.transform.position;
@@ -52,15 +47,7 @@ public class AlienController : MonoBehaviour
 
             
 
-            if (playerPos.x - transform.position.x < 10 && onCamera == true)
-            {
-               weapon.Attacking = true;
-            }
-            else
-            {
-                weapon.Attacking = false;
-            }
-        }
+       
     }
 }
 

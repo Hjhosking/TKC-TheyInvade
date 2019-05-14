@@ -16,15 +16,19 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        //
         if (hitInfo.gameObject.tag == "Enemy" && playerWeapon == true)
         {
             Debug.Log(hitInfo.name);
             Destroy(hitInfo.gameObject);
             Destroy(gameObject);
         }
-        else
+
+        //Bullets destroy on collision with any object other than killZone collider 
+    
+        else if (hitInfo.gameObject.tag != "enemyTrigger")
         {
-            Destroy(gameObject);
+           Destroy(gameObject);
         }
     }
 }
