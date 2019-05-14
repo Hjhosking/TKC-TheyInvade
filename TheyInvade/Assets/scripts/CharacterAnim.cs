@@ -28,15 +28,14 @@ public class CharacterAnim : MonoBehaviour
         }
     }
 
+    // Triggers Player Health Loss on Enemy Collision
     void OnCollisionEnter2D(Collision2D collision)
-    { 
+    {
         if (collision.gameObject.tag == "Enemy")
         {
             playerContact = -1; //subtract 1 from player healh
             playerStats.updateCurrentHealth(playerContact);
-            string i = "works";
             Debug.Log(collision);
         }
     }
-
 }

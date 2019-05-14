@@ -32,6 +32,7 @@ public class PlayerStats : MonoBehaviour
         this.currentHealth = 3;
     }
 
+    // Modifys Player Health when damage taken
     public void updateCurrentHealth(int damage)
     {
         health.CurrentVal = health.CurrentVal + damage;

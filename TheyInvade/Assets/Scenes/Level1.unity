@@ -220,7 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 631979201}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 8476695401118716349, guid: 033ca3aecefdbc94287b792c111261bf,
+    type: 3}
 --- !u!114 &13325311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,9 +933,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459301531}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 0.32548484
   m_LinearDrag: 0
@@ -1377,11 +1378,10 @@ GameObject:
   m_Component:
   - component: {fileID: 594112631}
   - component: {fileID: 594112630}
-  - component: {fileID: 594112632}
   - component: {fileID: 594112634}
-  - component: {fileID: 594112633}
-  m_Layer: 0
-  m_Name: Alien
+  - component: {fileID: 594112632}
+  m_Layer: 12
+  m_Name: AlienLeft
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,37 +1445,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.6843543, y: -0.245, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1212535629}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &594112632
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594112629}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0029079914, y: -0.0033978224}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.501875, y: 1.5025}
-    newSize: {x: 0.5735714, y: 1.7171428}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6193805, y: 1.5429072}
-  m_EdgeRadius: 0
---- !u!114 &594112633
+--- !u!114 &594112632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1484,9 +1459,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 594112629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aa9669c876bc4dd4a3e35d6beb058ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 566b848f4f2684e5abc061e2b3da4eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firePoint: {fileID: 1212535629}
+  bulletPrefab: {fileID: 8476695401118716349, guid: 7d1cf916356e9423d80cf31dd14cba47,
+    type: 3}
+  timer: 0
 --- !u!70 &594112634
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9099,6 +9078,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177940262}
   m_CullTransparentMesh: 0
+--- !u!1 &1212535628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212535629}
+  - component: {fileID: 1212535631}
+  - component: {fileID: 1212535630}
+  m_Layer: 12
+  m_Name: AlienFirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1212535629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212535628}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.23990011, y: -0.056899905, z: 2.3521743}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594112631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1212535630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212535628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a073b539b3fb429892d13462523a127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1212535631
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212535628}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 8
 --- !u!1 &1311821800
 GameObject:
   m_ObjectHideFlags: 0
