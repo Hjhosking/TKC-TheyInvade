@@ -9,6 +9,17 @@ public class Weapon : MonoBehaviour {
     public bool isPlayer = false;
     float timer = 0.0f;
     private bool canShoot = false;
+    public AudioClip alienGunSound;
+    public AudioClip playerGunSound;
+    private AudioSource alienSoundSource;
+    private AudioSource playerSoundSource;
+
+    void Awake()
+    {
+
+        alienSoundSource = GetComponent<AudioSource>();
+        playerSoundSource = GetComponent<AudioSource>();
+    }
 
     //trigger for enemy fire - receives command realayed from AlienController
     public bool CanShoot
@@ -31,6 +42,7 @@ public class Weapon : MonoBehaviour {
         {
             if (canShoot == true)
             {
+                alienSoundSource.Play();
                 Shoot();
             }
             if (canShoot == false)
@@ -51,7 +63,9 @@ public class Weapon : MonoBehaviour {
         // Player fire 
         if (isPlayer && Input.GetButtonDown("Fire1"))
         {
+            playerSoundSource.Play();
             Shoot();
+
         }
 
         else if (isPlayer == false && canShoot == true)

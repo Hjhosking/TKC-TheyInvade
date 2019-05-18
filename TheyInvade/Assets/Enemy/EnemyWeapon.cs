@@ -8,6 +8,14 @@ public class EnemyWeapon : MonoBehaviour
     public GameObject bulletPrefab;
     public float timer = 0.0f;
     public bool canShoot = false;
+    public bool triggerSound = true;
+    public AudioClip gunSound;
+    private AudioSource soundSource;
+
+    void Awake()
+    {
+        soundSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -17,6 +25,7 @@ public class EnemyWeapon : MonoBehaviour
             if (canShoot == true)
             {
                 Shoot();
+                soundSource.PlayOneShot(gunSound);
             }
             if (canShoot == false)
             {
@@ -32,15 +41,17 @@ public class EnemyWeapon : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+   //   level1AudioScript.playEnemyGunSound();
+   //     level2AudioScript.PlayEnemyGunSound(triggerSound);
     }
 
-    public void canShootTrue(bool sent)
+    public void CanShootTrue(bool sent)
     {
         this.canShoot = sent;
         Debug.Log(sent);
     }
 
-    public void canShootFalse(bool sent)
+    public void CanShootFalse(bool sent)
     {
         this.canShoot = sent;
         Debug.Log("false");

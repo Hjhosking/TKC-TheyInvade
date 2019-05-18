@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.Log(collision);
             bool send = true;
-            enemyWeapon.canShootTrue(send);
+            enemyWeapon.CanShootTrue(send);
          }
     }
 
@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.Log("Exit");
             bool send = false;
-            enemyWeapon.canShootFalse(send);  
+            enemyWeapon.CanShootFalse(send);  
         }
     }
 }
