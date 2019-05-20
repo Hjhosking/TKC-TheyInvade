@@ -8978,9 +8978,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1469951077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da1829ab0ce9cce4eb50e1e30dbbdb75, type: 3}
+  m_Script: {fileID: 11500000, guid: 74614d4e34d014c24bee39658fb7609b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDetected: 0
+  LevelToLoad: 1
+  countDownTimer: 0.5
 --- !u!61 &1469951079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11236,7 +11239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038029157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190482894}

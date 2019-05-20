@@ -34,7 +34,7 @@ public class CharacterAnim : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             playerContact = -1; //subtract 1 from player healh
-            playerStats.updateCurrentHealth(playerContact);
+           
             string i = "works";
             Debug.Log(collision);
         }

@@ -11,6 +11,10 @@ public class PlayerStats : MonoBehaviour
     private float currentHealth;
     private float currentLives;
 
+    public GameObject gameOver;
+
+    public int deathCount = 0;
+
     public float CurrentLives
     {
         get
@@ -19,15 +23,35 @@ public class PlayerStats : MonoBehaviour
         }
         set
         {
-            this.currentLives = value;
+            currentLives = value;
+            lives.CurrentVal = value;
         }
     }
 
+    public void Respawn()
+    {
+        CurrentHealth = 0;
+        CurrentLives--;
+        if (CurrentLives > 0)
+        {
+            CurrentHealth = 3;
+        }
+        else
+        {
+            gameOver.SetActive(true);
+        }
+        deathCount++;
+    }
     public float CurrentHealth
     {
         get
         {
             return this.currentHealth;
+        }
+        set
+        {
+            currentHealth = value;
+            health.CurrentVal = value;
         }
     }
 
@@ -41,61 +65,34 @@ public class PlayerStats : MonoBehaviour
         this.currentHealth = 3;
     }
 
-    public void updateCurrentHealth(int damage)
-    {
-        health.CurrentVal = health.CurrentVal + damage;
-        print(health.CurrentVal);
-    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
-            this.currentHealth--;
+            CurrentHealth--;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            this.currentHealth--;
+            CurrentHealth--;
         }
     }
 
 
-    void Start()
-    {
-
-    }
+  
 
     // Update is called once per frame
     void Update()
     {
-        if (health.CurrentVal > this.CurrentHealth)
+  
+        if (CurrentHealth == 0 && CurrentLives > 0)
         {
-            health.MaxVal = 3;
-            health.CurrentVal = this.CurrentHealth;
-            if (health.CurrentVal == 0 && lives.CurrentVal > 0)
-            {
-                this.currentHealth = 3;
-            }
-        }
-        if (lives.CurrentVal > this.currentLives)
-        {
-            lives.MaxVal = 3;
-            lives.CurrentVal = this.currentLives;
-            health.CurrentVal = 3;
-        }
+            Respawn();
 
-    
-
-        if (health.CurrentVal == 0)
-        {
-            lives.CurrentVal --;
-            this.currentLives = lives.CurrentVal;
-            if (lives.CurrentVal > 0)
-            {
-                health.CurrentVal = 3;
-            }
         }
+        
     }
 }

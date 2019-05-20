@@ -51,7 +51,7 @@ public class Weapon : MonoBehaviour {
             }
             else
             {
-                timer = 1.0f;
+                timer = .80f;
             }
         }
 

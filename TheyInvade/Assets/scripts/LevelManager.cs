@@ -19,10 +19,12 @@ public class LevelManager : MonoBehaviour
     public Transform spawnPosition;
     public Transform playerTransform;
     public static bool dead = false;
+    
+
+    [SerializeField]
+    private GameObject player;
+    float timer;
     public static int deathCount = 0;
-
-
-
 
 
 
@@ -45,21 +47,20 @@ public class LevelManager : MonoBehaviour
         {
             dead = true;
         }
-        if (dead && (deathCount <= maxRespawn))
+        if (dead && (character.deathCount < maxRespawn))
         {
+           
             // Trnsform player back to spawn point and deduct a life
             playerTransform.position = spawnPosition.position;
-            character.CurrentLives--;
+            character.Respawn();
             deathCount++;
             dead = false;
 
         }
-        else
+        else if (dead)
         {
-           //game over sequence
-            
+            Destroy(player);
         }
-        
 
         
         
