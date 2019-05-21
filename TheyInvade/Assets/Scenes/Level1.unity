@@ -11461,7 +11461,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameOver
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 506244603}
     - target: {fileID: 5108069178971216597, guid: ed5feae09b8de054fb7757d38e193a18,
         type: 3}
       propertyPath: m_LocalPosition.x
